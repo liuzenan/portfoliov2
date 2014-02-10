@@ -1,0 +1,117 @@
+@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
+@import "compass";
+@import "modules/_media";
+
+$base-font-size: 16px;
+$base-line-height: 24px;
+$base-dark-grey: #302F2F;
+$base-grey: #4A494A;
+$base-light-grey: #9B9A9B;
+$base-lighter-grey: #D4D3D4;
+$base-red: #D0011B;
+
+@include establish-baseline;
+
+html {
+	font-family: 'Vollkorn', serif;
+	-webkit-text-size-adjust: none;
+}
+
+#{headings()} {
+	color: $base-dark-grey;
+}
+
+h1 {
+	@include adjust-font-size-to(32px);
+}
+
+h2 {
+	@include adjust-font-size-to(24px);
+}
+
+h3, h4, h5, h6 {
+	@include adjust-font-size-to(20px);
+}
+
+p, footer, header{
+	color: $base-dark-grey;
+	@include adjust-font-size-to(16px);
+	-webkit-hyphens: auto; 
+	-moz-hyphens: auto; 
+	hyphens: auto;
+}
+
+.article-text p+p{
+	margin-top: 1.4em;
+}
+
+blockquote {
+	font-style: italic;
+	border-left: .2em solid $base-lighter-grey;
+	margin: 1.4em 0;
+	padding: 0.5em 1em;
+	footer {
+		text-align: right;
+	}
+}
+
+em, strong{
+	font-style: italic;
+}
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+@mixin container($width) {
+	width: $width;
+	margin: 0 auto;
+	max-width: 960px;
+}
+
+
+// links 
+a {
+	color: $base-grey;
+	&:hover {
+		color: #D0001A;
+	}
+}
+
+// misc
+
+hr {
+	border: 0;
+	color: $base-lighter-grey;
+	background-color: $base-lighter-grey;
+	height: 1px;
+}
+
+.date {
+	color: $base-red;
+}
+
+.article-date {
+	@include adjust-font-size-to(14px);
+}
+
+.article-title {
+	text-decoration: none;
+	
+	&.one-line {
+		width: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: block;
+		@include adjust-font-size-to(20px);
+	}
+}
+
+// adjust font size in large displays
+@include breakpoint($breakpoint-medium-wide) {
+	$base-font-size: 20px;
+	$base-line-height: 32px;
+	@include establish-baseline;
+}

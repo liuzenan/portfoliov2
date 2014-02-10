@@ -1,0 +1,8 @@
+@import "breakpoint";
+
+// create $breakpoint variables like so
+// assume min-width (by default) if only a number
+$breakpoint-medium-width: 460px;
+
+// set min-width/max-width if both values are numbers
+$breakpoint-medium-wide: 760px;

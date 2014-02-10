@@ -1,0 +1,24 @@
+@import "_media";
+
+.nav-links {
+	@include clearfix;
+	.nav-item {
+		width: 25%;
+		text-align: center;
+		text-decoration: none;
+		display: block;
+		float: left;
+		padding: 0.6em 0;
+	}
+
+	@include breakpoint($breakpoint-medium-width) {
+		width: 66%;
+		float: right;	
+		margin-top: 0.6em;
+	}
+
+	@include breakpoint($breakpoint-medium-wide) {
+		margin-top: 0.4em;
+	}
+}
+

@@ -1,0 +1,16 @@
+---
+layout: default
+title: Articles
+---
+<div class="section" id="articles">
+  	<ul class="blog-list">
+	    {% for post in site.posts %}
+	      <li class="blog-entry article-text"><a class="article-title one-line" href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+	      <a href="{{ BASE_PATH }}{{ post.url }}" class="article-title date">{{ post.date | date: "%b %-d, %Y" }}</a>
+	      <div class="excerpt">
+	      	{{ post.excerpt }}<br><a href="{{ BASE_PATH }}{{ post.url }}">read more</a>
+	      </div>
+	      </li>
+	    {% endfor %}
+	</ul>
+</div>

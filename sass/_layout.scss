@@ -1,0 +1,182 @@
+@import "_modules";
+
+// header layout
+#header {
+	padding: 1em 0 0 0;
+	@include container(88%);
+	border-bottom: 1px solid $base-lighter-grey;
+	@include clearfix;
+}
+
+// content layout
+#content {
+	width: 100%;
+}
+
+.section {
+	@include container(88%);
+}
+
+#footer {
+	border-top: 1px solid $base-lighter-grey;
+	padding: 1em 0;
+	@include container(88%);
+	@include clearfix;
+}
+
+// section
+.section {
+	padding: 1em 0;
+	@include container(88%);
+}
+
+.hero {
+	padding-top: 3em;
+	text-align: center;
+	hr {
+		width: 20px;
+		margin: 2em auto 0;
+
+	}
+	@include breakpoint($breakpoint-medium-width) {
+		font-size: 1.6em;
+	}
+
+	@include breakpoint($breakpoint-medium-wide) {
+		font-size: 1.8em;
+	}
+}
+
+.symbol-seperator {
+	margin: 1em auto 0;
+	font-size: 2em;
+	color: $base-lighter-grey;
+	border-top: 1px solid $base-lighter-grey;
+	border-bottom: 1px solid $base-lighter-grey;
+	width: 4em;
+	line-height: .08em;
+
+	span {
+		background-color: white;
+		padding: 0 .2em;
+	}
+
+
+
+}
+
+.hero-title {
+	font-size: 2em;
+	line-height: 1em;
+}
+
+.hero-subtitle {
+	margin: 2em auto 0;
+	width: 90%;
+	@include breakpoint($breakpoint-medium-width) {
+		font-size: .8em;
+		margin: 3em auto 0;
+		width: 70%;
+	}
+
+	@include breakpoint($breakpoint-medium-wide) {
+		font-size: .6em;
+		margin: 4em auto 0;
+		width: 60%;
+	}
+}
+
+.section-title {
+	font-style: italic;
+	color:$base-light-grey;
+	margin-bottom: 1em;
+}
+
+.section-header {
+	background-color: $base-dark-grey;
+	&.big-image {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	height: 12em;
+	position: relative;
+	color: white;
+	.sprite {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background-color: black;
+		opacity: 0.4;
+		z-index: 1;
+	}
+	.section {
+		position: relative;
+		height: 100%;
+		z-index: 2;
+	}
+	.section-title {
+		color: white;
+		padding-top: 1em;
+	}
+	.article-header{
+		position: absolute;
+		bottom: 1em;
+		left: 0;
+	}
+	.article-date {
+		color: white;
+	}
+	h2 {
+		color: white;
+	}
+	p {
+		color: white;
+	}
+
+	@include breakpoint($breakpoint-medium-width) {
+		height: 20em;
+	}
+}
+
+
+// article text
+.article-text {
+	max-width: 700px;
+	padding-top: 1em;
+}
+
+
+// portfolio 
+
+.portfolio {
+	@include clearfix;
+	padding-bottom: 1em;
+}
+
+.blog-entry {
+	.excerpt {
+		padding: 1em 0 2em 0;
+	}
+}
+
+.left-footer {
+
+	@include breakpoint($breakpoint-medium-width) {
+		float: left;
+	}
+
+}
+
+.right-footer {
+
+	@include breakpoint($breakpoint-medium-width) {
+		text-align: right;
+		float: right;
+	}
+
+}

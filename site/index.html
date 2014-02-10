@@ -1,0 +1,28 @@
+---
+layout: default
+title: Designer &amp; Developer
+---
+<div id="home">
+	<div class="section hero">
+		<h2 class="hero-title">Crafting delightful user experiences</h2>
+		<div class="symbol-seperator"><span>⚔</span></div>
+		<p class="hero-subtitle">Liu Zenan is a UX designer and software developer who cares about the quality and impact of his work.</p>
+	</div>
+	<div class="section">
+		<div class="section-title">// Recent Work</div>
+		{% include portfolio.html %}	
+	</div>
+	<article id="article">
+		{% assign post = site.posts.first %}
+  		{% assign content = post.content %}
+  		{% include post_detail.html %}		
+	</article>
+	<div class="section">
+	<div class="section-title">// Recent Articles</div>
+		<ul class="blog-list">
+		  {% for post in site.posts offset:1 limit:5 %}
+		  <li class="blog-entry article-text"><a class="article-title one-line" href="{{ BASE_PATH }}{{ post.url }}"><span class="date">{{ post.date | date: "%b %-d" }}</span>&nbsp;&nbsp;{{ post.title }}</a></li>
+		  {% endfor %}
+		</ul>
+	</div>
+</div>
