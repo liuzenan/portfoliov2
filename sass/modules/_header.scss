@@ -1,0 +1,98 @@
+@import "_mixin";
+
+.section-header {
+	background-color: $base-dark-grey;
+	&.big-image {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	height: 12em;
+	position: relative;
+	color: white;
+
+	.sprite {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background-color: black;
+		opacity: 0.4;
+		z-index: 1;
+	}
+	.section {
+		position: relative;
+		height: 100%;
+		z-index: 2;
+	}
+	.section-title {
+		color: white;
+		padding-top: 1em;
+	}
+	.article-header{
+		position: absolute;
+		bottom: 1em;
+		left: 0;
+	}
+
+	.article-date {
+		color: white;
+	}
+	h2 {
+		color: white;
+	}
+	p {
+		color: white;
+		-webkit-hyphens: none; 
+		-moz-hyphens: none; 
+		hyphens: none;
+	}
+
+	@include breakpoint($breakpoint-medium-width) {
+		height: 20em;
+		.portfolio-header {
+			margin-top: 6em;
+			text-align: center;
+		}
+
+		.title-seperator {
+			margin: 1em auto;
+		}
+	}
+}
+
+
+.about-header {
+
+	text-align: center;
+	margin-top: 2.5em;
+
+	h2 {
+		font-size: 1.8em;
+	}
+
+	p {
+		@include alternative-font;
+		font-size: 0.8em;
+	}
+
+	@include breakpoint($breakpoint-medium-width) {
+		margin-top: 4em;
+		h2 {
+			font-size: 2.4em;
+		}
+		p {
+			font-size: 1em;
+		}
+	}
+
+	@include breakpoint($breakpoint-medium-wide) {
+		margin-top: 5em;
+		h2 {
+			font-size: 3em;
+		}
+	}
+}

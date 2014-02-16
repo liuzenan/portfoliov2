@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
+@charset "UTF-8";
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
@@ -81,34 +81,34 @@ html {
 
 /* line 15, ../../sass/_base.scss */
 html {
-  font-family: "Vollkorn", serif;
+  font-family: "vollkorn",serif;
   -webkit-text-size-adjust: none;
 }
 
-/* line 20, ../../sass/_base.scss */
+/* line 22, ../../sass/_base.scss */
 h1, h2, h3, h4, h5, h6 {
   color: #302f2f;
 }
 
-/* line 24, ../../sass/_base.scss */
+/* line 26, ../../sass/_base.scss */
 h1 {
   font-size: 2em;
   line-height: 1.5em;
 }
 
-/* line 28, ../../sass/_base.scss */
+/* line 30, ../../sass/_base.scss */
 h2 {
   font-size: 1.5em;
   line-height: 2em;
 }
 
-/* line 32, ../../sass/_base.scss */
+/* line 34, ../../sass/_base.scss */
 h3, h4, h5, h6 {
   font-size: 1.25em;
   line-height: 1.2em;
 }
 
-/* line 36, ../../sass/_base.scss */
+/* line 38, ../../sass/_base.scss */
 p, footer, header {
   color: #302f2f;
   font-size: 1em;
@@ -118,46 +118,51 @@ p, footer, header {
   hyphens: auto;
 }
 
-/* line 44, ../../sass/_base.scss */
+/* line 46, ../../sass/_base.scss */
+.title {
+  line-height: 1em;
+}
+
+/* line 50, ../../sass/_base.scss */
 .article-text p + p {
   margin-top: 1.4em;
 }
 
-/* line 48, ../../sass/_base.scss */
+/* line 54, ../../sass/_base.scss */
 blockquote {
   font-style: italic;
   border-left: 0.2em solid #d4d3d4;
   margin: 1.4em 0;
   padding: 0.5em 1em;
 }
-/* line 53, ../../sass/_base.scss */
+/* line 59, ../../sass/_base.scss */
 blockquote footer {
   text-align: right;
 }
 
-/* line 58, ../../sass/_base.scss */
+/* line 64, ../../sass/_base.scss */
 em, strong {
   font-style: italic;
 }
 
 /* apply a natural box layout model to all elements */
-/* line 63, ../../sass/_base.scss */
+/* line 69, ../../sass/_base.scss */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 75, ../../sass/_base.scss */
+/* line 81, ../../sass/_base.scss */
 a {
   color: #4a494a;
 }
-/* line 77, ../../sass/_base.scss */
+/* line 83, ../../sass/_base.scss */
 a:hover {
   color: #D0001A;
 }
 
-/* line 84, ../../sass/_base.scss */
+/* line 90, ../../sass/_base.scss */
 hr {
   border: 0;
   color: #d4d3d4;
@@ -165,22 +170,27 @@ hr {
   height: 1px;
 }
 
-/* line 91, ../../sass/_base.scss */
+/* line 97, ../../sass/_base.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 102, ../../sass/_base.scss */
 .date {
   color: #d0011b;
 }
 
-/* line 95, ../../sass/_base.scss */
+/* line 106, ../../sass/_base.scss */
 .article-date {
   font-size: 0.875em;
   line-height: 1.71429em;
 }
 
-/* line 99, ../../sass/_base.scss */
+/* line 110, ../../sass/_base.scss */
 .article-title {
   text-decoration: none;
 }
-/* line 102, ../../sass/_base.scss */
+/* line 113, ../../sass/_base.scss */
 .article-title.one-line {
   width: 100%;
   white-space: nowrap;
@@ -310,136 +320,20 @@ hr {
   }
 }
 
-/* line 4, ../../sass/_layout.scss */
-#header {
-  padding: 1em 0 0 0;
-  width: 88%;
-  margin: 0 auto;
-  max-width: 960px;
-  border-bottom: 1px solid #d4d3d4;
-  overflow: hidden;
-  *zoom: 1;
-}
-
-/* line 12, ../../sass/_layout.scss */
-#content {
-  width: 100%;
-}
-
-/* line 16, ../../sass/_layout.scss */
-.section {
-  width: 88%;
-  margin: 0 auto;
-  max-width: 960px;
-}
-
-/* line 20, ../../sass/_layout.scss */
-#footer {
-  border-top: 1px solid #d4d3d4;
-  padding: 1em 0;
-  width: 88%;
-  margin: 0 auto;
-  max-width: 960px;
-  overflow: hidden;
-  *zoom: 1;
-}
-
-/* line 28, ../../sass/_layout.scss */
-.section {
-  padding: 1em 0;
-  width: 88%;
-  margin: 0 auto;
-  max-width: 960px;
-}
-
-/* line 33, ../../sass/_layout.scss */
-.hero {
-  padding-top: 3em;
-  text-align: center;
-}
-/* line 36, ../../sass/_layout.scss */
-.hero hr {
-  width: 20px;
-  margin: 2em auto 0;
-}
-@media (min-width: 460px) {
-  /* line 33, ../../sass/_layout.scss */
-  .hero {
-    font-size: 1.6em;
-  }
-}
-@media (min-width: 760px) {
-  /* line 33, ../../sass/_layout.scss */
-  .hero {
-    font-size: 1.8em;
-  }
-}
-
-/* line 50, ../../sass/_layout.scss */
-.symbol-seperator {
-  margin: 1em auto 0;
-  font-size: 2em;
-  color: #d4d3d4;
-  border-top: 1px solid #d4d3d4;
-  border-bottom: 1px solid #d4d3d4;
-  width: 4em;
-  line-height: .08em;
-}
-/* line 59, ../../sass/_layout.scss */
-.symbol-seperator span {
-  background-color: white;
-  padding: 0 0.2em;
-}
-
-/* line 68, ../../sass/_layout.scss */
-.hero-title {
-  font-size: 2em;
-  line-height: 1em;
-}
-
-/* line 73, ../../sass/_layout.scss */
-.hero-subtitle {
-  margin: 2em auto 0;
-  width: 90%;
-}
-@media (min-width: 460px) {
-  /* line 73, ../../sass/_layout.scss */
-  .hero-subtitle {
-    font-size: .8em;
-    margin: 3em auto 0;
-    width: 70%;
-  }
-}
-@media (min-width: 760px) {
-  /* line 73, ../../sass/_layout.scss */
-  .hero-subtitle {
-    font-size: .6em;
-    margin: 4em auto 0;
-    width: 60%;
-  }
-}
-
-/* line 89, ../../sass/_layout.scss */
-.section-title {
-  font-style: italic;
-  color: #9b9a9b;
-  margin-bottom: 1em;
-}
-
-/* line 95, ../../sass/_layout.scss */
+/* line 3, ../../sass/modules/_header.scss */
 .section-header {
   background-color: #302f2f;
   height: 12em;
   position: relative;
   color: white;
 }
-/* line 97, ../../sass/_layout.scss */
+/* line 5, ../../sass/modules/_header.scss */
 .section-header.big-image {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-/* line 105, ../../sass/_layout.scss */
+/* line 14, ../../sass/modules/_header.scss */
 .section-header .sprite {
   position: absolute;
   width: 100%;
@@ -452,71 +346,356 @@ hr {
   opacity: 0.4;
   z-index: 1;
 }
-/* line 117, ../../sass/_layout.scss */
+/* line 26, ../../sass/modules/_header.scss */
 .section-header .section {
   position: relative;
   height: 100%;
   z-index: 2;
 }
-/* line 122, ../../sass/_layout.scss */
+/* line 31, ../../sass/modules/_header.scss */
 .section-header .section-title {
   color: white;
   padding-top: 1em;
 }
-/* line 126, ../../sass/_layout.scss */
+/* line 35, ../../sass/modules/_header.scss */
 .section-header .article-header {
   position: absolute;
   bottom: 1em;
   left: 0;
 }
-/* line 131, ../../sass/_layout.scss */
+/* line 41, ../../sass/modules/_header.scss */
 .section-header .article-date {
   color: white;
 }
-/* line 134, ../../sass/_layout.scss */
+/* line 44, ../../sass/modules/_header.scss */
 .section-header h2 {
   color: white;
 }
-/* line 137, ../../sass/_layout.scss */
+/* line 47, ../../sass/modules/_header.scss */
 .section-header p {
   color: white;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
 }
 @media (min-width: 460px) {
-  /* line 95, ../../sass/_layout.scss */
+  /* line 3, ../../sass/modules/_header.scss */
   .section-header {
     height: 20em;
   }
+  /* line 56, ../../sass/modules/_header.scss */
+  .section-header .portfolio-header {
+    margin-top: 6em;
+    text-align: center;
+  }
+  /* line 61, ../../sass/modules/_header.scss */
+  .section-header .title-seperator {
+    margin: 1em auto;
+  }
 }
 
-/* line 148, ../../sass/_layout.scss */
-.article-text {
-  max-width: 700px;
-  padding-top: 1em;
+/* line 68, ../../sass/modules/_header.scss */
+.about-header {
+  text-align: center;
+  margin-top: 2.5em;
+}
+/* line 73, ../../sass/modules/_header.scss */
+.about-header h2 {
+  font-size: 1.8em;
+}
+/* line 77, ../../sass/modules/_header.scss */
+.about-header p {
+  font-family: "futura-pt", Futura, “Trebuchet MS”, Arial, sans-serif;
+  font-size: 0.8em;
+}
+@media (min-width: 460px) {
+  /* line 68, ../../sass/modules/_header.scss */
+  .about-header {
+    margin-top: 4em;
+  }
+  /* line 84, ../../sass/modules/_header.scss */
+  .about-header h2 {
+    font-size: 2.4em;
+  }
+  /* line 87, ../../sass/modules/_header.scss */
+  .about-header p {
+    font-size: 1em;
+  }
+}
+@media (min-width: 760px) {
+  /* line 68, ../../sass/modules/_header.scss */
+  .about-header {
+    margin-top: 5em;
+  }
+  /* line 94, ../../sass/modules/_header.scss */
+  .about-header h2 {
+    font-size: 3em;
+  }
 }
 
-/* line 156, ../../sass/_layout.scss */
-.portfolio {
+/* line 4, ../../sass/_layout.scss */
+#header {
+  padding: 1em 0 0 0;
+  width: 88%;
+  margin: 0 auto;
+  max-width: 960px;
+  border-bottom: 1px solid #d4d3d4;
   overflow: hidden;
   *zoom: 1;
-  padding-bottom: 1em;
 }
 
-/* line 162, ../../sass/_layout.scss */
-.blog-entry .excerpt {
-  padding: 1em 0 2em 0;
+/* line 11, ../../sass/_layout.scss */
+.top-banner {
+  background: #d4d3d4;
+  color: white;
+  text-align: center;
+  font-size: 0.8em;
+  font-family: "futura-pt", Futura, “Trebuchet MS”, Arial, sans-serif;
+}
+
+/* line 20, ../../sass/_layout.scss */
+#content {
+  width: 100%;
+  margin-bottom: 4em;
+}
+
+/* line 27, ../../sass/_layout.scss */
+#footer {
+  border-top: 1px solid #d4d3d4;
+  padding: 1em 0;
+  width: 88%;
+  margin: 0 auto;
+  max-width: 960px;
+  overflow: hidden;
+  *zoom: 1;
 }
 
 @media (min-width: 460px) {
-  /* line 167, ../../sass/_layout.scss */
+  /* line 36, ../../sass/_layout.scss */
   .left-footer {
     float: left;
   }
 }
 
 @media (min-width: 460px) {
-  /* line 175, ../../sass/_layout.scss */
+  /* line 44, ../../sass/_layout.scss */
   .right-footer {
     text-align: right;
     float: right;
   }
+}
+
+/* line 56, ../../sass/_layout.scss */
+.section {
+  padding: 1em 0;
+  width: 88%;
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+/* line 61, ../../sass/_layout.scss */
+.section-title {
+  font-style: italic;
+  color: #9b9a9b;
+  margin-bottom: 1em;
+}
+
+/* line 70, ../../sass/_layout.scss */
+.hero {
+  padding-top: 3em;
+  text-align: center;
+}
+/* line 73, ../../sass/_layout.scss */
+.hero hr {
+  width: 20px;
+  margin: 2em auto 0;
+}
+@media (min-width: 460px) {
+  /* line 70, ../../sass/_layout.scss */
+  .hero {
+    font-size: 1.6em;
+  }
+}
+@media (min-width: 760px) {
+  /* line 70, ../../sass/_layout.scss */
+  .hero {
+    font-size: 1.8em;
+  }
+}
+
+/* line 87, ../../sass/_layout.scss */
+.symbol-seperator {
+  margin: 1em auto 0;
+  font-size: 2em;
+  color: #d4d3d4;
+  border-top: 1px solid #d4d3d4;
+  border-bottom: 1px solid #d4d3d4;
+  width: 4em;
+  line-height: .08em;
+}
+/* line 96, ../../sass/_layout.scss */
+.symbol-seperator span {
+  background-color: white;
+  padding: 0 .2em;
+}
+
+/* line 103, ../../sass/_layout.scss */
+.hero-title {
+  font-size: 2em;
+  line-height: 1em;
+}
+
+/* line 108, ../../sass/_layout.scss */
+.hero-subtitle {
+  margin: 2em auto 0;
+  width: 90%;
+}
+@media (min-width: 460px) {
+  /* line 108, ../../sass/_layout.scss */
+  .hero-subtitle {
+    font-size: .8em;
+    margin: 3em auto 0;
+    width: 70%;
+  }
+}
+@media (min-width: 760px) {
+  /* line 108, ../../sass/_layout.scss */
+  .hero-subtitle {
+    font-size: .6em;
+    margin: 4em auto 0;
+    width: 60%;
+  }
+}
+
+/* line 127, ../../sass/_layout.scss */
+.label {
+  font-family: "futura-pt", Futura, “Trebuchet MS”, Arial, sans-serif;
+  background: #d4d3d4;
+  color: white;
+  font-size: 0.7em;
+  border-radius: 0.4em;
+  padding: 0 .8em;
+  margin: 0 .5em;
+  display: inline-block;
+}
+
+/* line 140, ../../sass/_layout.scss */
+.article-text {
+  padding-top: 1em;
+}
+
+/* line 147, ../../sass/_layout.scss */
+.portfolio {
+  overflow: hidden;
+  *zoom: 1;
+  padding-bottom: 1em;
+}
+
+/* line 157, ../../sass/_layout.scss */
+.blog-entry .excerpt {
+  padding: 1em 0 2em 0;
+}
+
+/* line 166, ../../sass/_layout.scss */
+#gallery .portfolio {
+  margin-top: 4em;
+}
+
+/* line 174, ../../sass/_layout.scss */
+.article-text img, #portfolio img {
+  margin: 3em 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 181, ../../sass/_layout.scss */
+.article-text p, .article-text blockquote, #portfolio p, #portfolio blockquote {
+  max-width: 700px;
+}
+
+/* line 189, ../../sass/_layout.scss */
+#portfolio h2 {
+  font-family: "futura-pt", Futura, “Trebuchet MS”, Arial, sans-serif;
+  font-weight: 700;
+}
+/* line 194, ../../sass/_layout.scss */
+#portfolio h3 {
+  text-align: center;
+}
+/* line 198, ../../sass/_layout.scss */
+#portfolio .intro {
+  font-size: 1.4em;
+  padding: 1em 0;
+}
+/* line 203, ../../sass/_layout.scss */
+#portfolio .portfolio-content {
+  padding-top: 3em;
+}
+/* line 208, ../../sass/_layout.scss */
+#portfolio .portfolio-header {
+  margin-top: 3em;
+  text-align: center;
+}
+/* line 211, ../../sass/_layout.scss */
+#portfolio .portfolio-header h2 {
+  font-size: 2.4em;
+  line-height: 1.33333em;
+}
+/* line 215, ../../sass/_layout.scss */
+#portfolio .portfolio-header p {
+  font-size: 0.9em;
+  line-height: 1.77778em;
+}
+/* line 218, ../../sass/_layout.scss */
+#portfolio .portfolio-header .title {
+  text-transform: uppercase;
+}
+/* line 223, ../../sass/_layout.scss */
+#portfolio .title-seperator {
+  height: 0.2em;
+  width: 2em;
+  margin: 2em auto;
+  border-top: 1px solid #d4d3d4;
+  border-bottom: 1px solid #d4d3d4;
+}
+/* line 232, ../../sass/_layout.scss */
+#portfolio .skills {
+  margin-top: .5em;
+}
+@media (min-width: 460px) {
+  /* line 237, ../../sass/_layout.scss */
+  #portfolio p {
+    width: 80%;
+    margin: 0 auto;
+  }
+  /* line 241, ../../sass/_layout.scss */
+  #portfolio .portfolio-header h2 {
+    font-size: 3.6em;
+    line-height: 1.33333em;
+  }
+  /* line 245, ../../sass/_layout.scss */
+  #portfolio .intro {
+    font-size: 1.6em;
+  }
+}
+@media (min-width: 760px) {
+  /* line 251, ../../sass/_layout.scss */
+  #portfolio p {
+    width: 60%;
+    margin: 0 auto;
+  }
+  /* line 255, ../../sass/_layout.scss */
+  #portfolio .portfolio-header h2 {
+    font-size: 3.6em;
+    line-height: 1.33333em;
+  }
+  /* line 258, ../../sass/_layout.scss */
+  #portfolio img {
+    margin: 4em auto;
+  }
+}
+
+/* line 264, ../../sass/_layout.scss */
+img.shadow {
+  box-shadow: 0 0 2px #d4d3d4;
 }

@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<div id="portfolio">
+	<div class="section">
+		<div class="portfolio-header">
+			<h2 class="title">{{ page.title }}</h2>
+			<div class="title-seperator"></div>
+			<p class="subtitle">{{ page.subtitle }}</p>
+			<div class="skills">
+				{% for skill in page.skills %}
+				<span class="label">
+					{{skill}}
+				</span>
+				{% endfor %}
+			</div>
+		</div>		
+	</div>	
+	<div class="section portfolio-content">
+		{{ content }}
+	</div>	
+</div>

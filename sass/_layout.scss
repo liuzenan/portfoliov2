@@ -8,14 +8,21 @@
 	@include clearfix;
 }
 
+.top-banner {
+	background: $base-lighter-grey;
+	color: white;
+	text-align: center;
+	font-size: 0.8em;
+	@include alternative-font;
+}
+
 // content layout
 #content {
 	width: 100%;
+	margin-bottom: 4em;
 }
 
-.section {
-	@include container(88%);
-}
+// footer
 
 #footer {
 	border-top: 1px solid $base-lighter-grey;
@@ -24,11 +31,41 @@
 	@include clearfix;
 }
 
+
+
+.left-footer {
+
+	@include breakpoint($breakpoint-medium-width) {
+		float: left;
+	}
+
+}
+
+.right-footer {
+
+	@include breakpoint($breakpoint-medium-width) {
+		text-align: right;
+		float: right;
+	}
+
+}
+
+
 // section
+
 .section {
 	padding: 1em 0;
 	@include container(88%);
 }
+
+.section-title {
+	font-style: italic;
+	color:$base-light-grey;
+	margin-bottom: 1em;
+}
+
+
+// hero section
 
 .hero {
 	padding-top: 3em;
@@ -61,8 +98,6 @@
 		padding: 0 .2em;
 	}
 
-
-
 }
 
 .hero-title {
@@ -86,77 +121,37 @@
 	}
 }
 
-.section-title {
-	font-style: italic;
-	color:$base-light-grey;
-	margin-bottom: 1em;
-}
 
-.section-header {
-	background-color: $base-dark-grey;
-	&.big-image {
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center;
-	}
-	height: 12em;
-	position: relative;
+// label
+
+.label {
+	@include alternative-font;
+	background: $base-lighter-grey;
 	color: white;
-	.sprite {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		left: 0;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		background-color: black;
-		opacity: 0.4;
-		z-index: 1;
-	}
-	.section {
-		position: relative;
-		height: 100%;
-		z-index: 2;
-	}
-	.section-title {
-		color: white;
-		padding-top: 1em;
-	}
-	.article-header{
-		position: absolute;
-		bottom: 1em;
-		left: 0;
-	}
-	.article-date {
-		color: white;
-	}
-	h2 {
-		color: white;
-	}
-	p {
-		color: white;
-	}
-
-	@include breakpoint($breakpoint-medium-width) {
-		height: 20em;
-	}
+	font-size: 0.7em;
+	border-radius: 0.4em;
+	padding: 0 .8em;
+	margin: 0 .5em;
+	display: inline-block;
 }
-
 
 // article text
+
 .article-text {
-	max-width: 700px;
 	padding-top: 1em;
 }
 
 
-// portfolio 
+// portfolio wrapper
 
 .portfolio {
 	@include clearfix;
 	padding-bottom: 1em;
+	
 }
+
+
+// blog list page
 
 .blog-entry {
 	.excerpt {
@@ -164,19 +159,110 @@
 	}
 }
 
-.left-footer {
 
-	@include breakpoint($breakpoint-medium-width) {
-		float: left;
+// gallery page
+
+#gallery {
+	.portfolio {
+		margin-top: 4em;
 	}
-
 }
 
-.right-footer {
+// portfolio page
 
-	@include breakpoint($breakpoint-medium-width) {
-		text-align: right;
-		float: right;
+.article-text, #portfolio {
+	img {
+		margin: 3em 0;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
+	p, blockquote {
+		max-width: 700px;
+	}
 }
+
+
+#portfolio {
+
+	h2 {
+		@include alternative-font;
+		font-weight: 700;
+	}
+
+	h3 {
+		text-align: center;
+	}
+
+	.intro {
+		font-size: 1.4em;
+		padding: 1em 0;
+	}
+
+	.portfolio-content {
+		padding-top: 3em;
+	}
+
+
+	.portfolio-header {
+		margin-top: 3em;
+		text-align: center;
+		h2 {
+			@include adjust-font-size-to(48px);
+		}
+
+		p {
+			@include adjust-font-size-to(18px);
+		}
+		.title {
+			text-transform: uppercase;
+		}
+	}
+
+	.title-seperator {
+		height: 0.2em;
+		width: 2em;
+		margin: 2em auto;
+		border-top: 1px solid $base-lighter-grey;;
+		border-bottom: 1px solid $base-lighter-grey;;
+
+	}
+
+	.skills {
+		margin-top: .5em;
+	}
+
+	@include breakpoint($breakpoint-medium-width) {
+		p {
+			width: 80%;
+			margin: 0 auto;
+		}
+		.portfolio-header h2{
+			@include adjust-font-size-to(72px);
+		}
+
+		.intro {
+			font-size: 1.6em;
+		}
+	}
+
+	@include breakpoint($breakpoint-medium-wide) {
+		p {
+			width: 60%;
+			margin: 0 auto;
+		}
+		.portfolio-header h2{
+			@include adjust-font-size-to(72px);
+		}
+		img {
+			margin: 4em auto;
+		}
+	}
+}
+
+img.shadow{
+	box-shadow: 0 0 2px $base-lighter-grey;
+}
+
+
