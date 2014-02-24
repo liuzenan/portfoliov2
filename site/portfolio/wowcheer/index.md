@@ -11,3 +11,15 @@ skills:
 <div>
 	<img src="img/wowcheer_card.png" alt="">
 </div>
+
+<div>
+	<img class="shadow" src="img/wowcheer_home.png" alt="">
+</div>
+
+<div>
+	<img class="shadow" src="img/wowcheer_search.png" alt="">
+</div>
+
+<div>
+	<img class="shadow" src="img/wowcheer_project.png" alt="">
+</div>

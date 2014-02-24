@@ -18,14 +18,21 @@ skills:
 	Most of us love to listen to music, some people also like to share music with friends. 
 </p>
 
-Song dedications are not uncommon. MusTale is an iPhone app that makes song dedication simple and fun. 
+Song dedications are not uncommon. MusTale is an iPhone app that makes song dedication simple and fun. This project is a demo built in a 24 hours hackathon.
 
-<div>
+<figure>
 	<img src="img/icon.png" alt="" width="180">
+	<figcaption>App icon</figcaption>
+</figure>
+
+<div>
+	<img src="img/play.png" alt="">
 </div>
 
 <div>
-	<img src="img/intro.png" alt="">
+	<img src="img/recording.png" alt="">
 </div>
+
+
 
 

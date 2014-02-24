@@ -8,8 +8,7 @@ title: Designer &amp; Developer
 		<div class="symbol-seperator"><span>⚔</span></div>
 		<p class="hero-subtitle">Liu Zenan is a UX designer and software developer who cares about the quality and impact of his work.</p>
 	</div>
-	<div class="section">
-		<div class="section-title">// Recent Work</div>
+	<div class="section" id="home-portfolio">
 		{% include portfolio.html %}	
 	</div>
 	<article id="article">
@@ -17,8 +16,8 @@ title: Designer &amp; Developer
   		{% assign content = post.content %}
   		{% include post_detail.html %}		
 	</article>
-	<div class="section">
-	<div class="section-title">// Recent Articles</div>
+	<div class="section" id="home-recent">
+	<div class="section-title">Recent Articles</div>
 		<ul class="blog-list">
 		  {% for post in site.posts offset:1 limit:5 %}
 		  <li class="blog-entry article-text"><a class="article-title one-line" href="{{ BASE_PATH }}{{ post.url }}"><span class="date">{{ post.date | date: "%b %-d" }}</span>&nbsp;&nbsp;{{ post.title }}</a></li>

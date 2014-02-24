@@ -6,6 +6,11 @@
 	position: relative;
 	margin-bottom: 1em;
 	// border: 1px solid $base-lighter-grey;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
 	line-height: 0;
 	.case-thumbnail {
 		width: 100%;
@@ -36,5 +41,10 @@
 		width: 33%;
 		margin-right: .3%;
 		float: left;		
+	}
+
+	&:hover {
+		opacity: .6;
+		@include filter(grayscale(1));
 	}
 }

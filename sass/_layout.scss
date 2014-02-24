@@ -94,7 +94,7 @@
 	line-height: .08em;
 
 	span {
-		background-color: white;
+		background-color: $base-background-grey;
 		padding: 0 .2em;
 	}
 
@@ -151,11 +151,32 @@
 }
 
 
+#home-portfolio {
+	@include breakpoint($breakpoint-medium-width) {
+		margin-bottom: 2em;
+	}
+	@include breakpoint($breakpoint-medium-wide) {
+		margin-bottom: 4em;
+	}
+}
+
+#home-recent {
+	max-width: 700px;
+	margin: 4em auto 0 auto;
+}
+
+
 // blog list page
 
 .blog-entry {
 	.excerpt {
 		padding: 1em 0 2em 0;
+	}
+}
+
+#articles .excerpt{
+	p {
+		margin-left: 0;
 	}
 }
 
@@ -171,15 +192,30 @@
 // portfolio page
 
 .article-text, #portfolio {
-	img {
+	img, table, figure {
 		margin: 3em 0;
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
 	}
 
-	p, blockquote {
+	figure img {
+		margin: 0 auto 1em auto;
+	}
+
+	p, blockquote, ul, ol {
 		max-width: 700px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	ul, ol {
+		margin: 1.4em auto;
+	}
+
+	h3 {
+		max-width: 700px;
+		margin: 1em auto;
 	}
 }
 
@@ -218,6 +254,9 @@
 		.title {
 			text-transform: uppercase;
 		}
+		.subtitle {
+			margin-bottom: 1em;
+		}
 	}
 
 	.title-seperator {
@@ -238,8 +277,13 @@
 			width: 80%;
 			margin: 0 auto;
 		}
+
+		ul, ol {
+			width: 80%;
+		}
+
 		.portfolio-header h2{
-			@include adjust-font-size-to(72px);
+			@include adjust-font-size-to(56px);
 		}
 
 		.intro {
@@ -249,14 +293,27 @@
 
 	@include breakpoint($breakpoint-medium-wide) {
 		p {
-			width: 60%;
+			width: 70%;
 			margin: 0 auto;
 		}
+
+		ul, ol {
+			width: 70%;
+		}
+
 		.portfolio-header h2{
 			@include adjust-font-size-to(72px);
 		}
 		img {
 			margin: 4em auto;
+		}
+
+		figure {
+			margin: 3em auto 4em auto;
+		}
+
+		figure img {
+			margin: 1em auto;
 		}
 	}
 }
@@ -266,3 +323,8 @@ img.shadow{
 }
 
 
+ul.blog-list{
+	li {
+		list-style: none;
+	}
+}

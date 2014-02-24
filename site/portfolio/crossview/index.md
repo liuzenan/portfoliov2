@@ -8,3 +8,27 @@ skills:
 - HTML5/SASS
 - Mobile Web
 ---
+
+<div>
+	<img src="img/cv_login.png" width="320" alt="">
+</div>
+
+<div>
+	<img src="img/cv_conversation.jpg" width="320" alt="">
+</div>
+
+<div>
+	<img src="img/cv_location.png" width="320" alt="">
+</div>
+
+<div>
+	<img src="img/cv_compose.png" width="320" alt="">
+</div>
+
+<div>
+	<img src="img/cv_post.png" width="320" alt="">
+</div>
+
+<div>
+	<img src="img/cv_profile.png" width="320" alt="">
+</div>

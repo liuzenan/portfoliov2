@@ -6,7 +6,9 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
+		box-shadow: inset 0 6px 4px rgba(0,0,0,0.2);
 	}
+	
 	height: 12em;
 	position: relative;
 	color: white;
@@ -26,6 +28,8 @@
 	.section {
 		position: relative;
 		height: 100%;
+		max-width: 700px;
+		margin: 0 auto;
 		z-index: 2;
 	}
 	.section-title {
@@ -75,7 +79,6 @@
 	}
 
 	p {
-		@include alternative-font;
 		font-size: 0.8em;
 	}
 
@@ -94,5 +97,11 @@
 		h2 {
 			font-size: 3em;
 		}
+	}
+}
+
+.article-header{
+	h2 {
+		line-height: 1.3em;
 	}
 }
